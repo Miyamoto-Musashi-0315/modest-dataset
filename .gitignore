@@ -1,0 +1,22 @@
+# Unused files folder
+images_and_pdfs/unused/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
