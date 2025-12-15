@@ -702,18 +702,46 @@
                 <div class="download-info">
                     <h3>Dataset Structure</h3>
                     <pre><code>MODEST/
-├── scene_01/
-│   ├── left/
-│   │   ├── f28_a2.8/
-│   │   ├── f28_a4.0/
-│   │   └── ...
-│   └── right/
-│       └── ...
-├── scene_02/ ... scene_09/
-├── illusions/
-└── calibration/
-    ├── intrinsics/
-    └── extrinsics/</code></pre>
+├── Global_calibration_set/
+│   ├── EOS6D_A_Left/
+│   │   └── fl_&lt;focal_length&gt;/
+│   │       ├── calibration/
+│   │       │   └── rectified/
+│   │       └── inference/
+│   ├── EOS6D_B_Right/
+│   │   └── fl_&lt;focal_length&gt;/
+│   │       ├── calibration/
+│   │       │   └── rectified/
+│   │       └── inference/
+│   └── stereocal_rectified_calibration_&lt;focal_length&gt;/
+│
+├── Scene&lt;id&gt;/
+│   ├── EOS6D_A_&lt;Left|Right&gt;/
+│   │   └── fl_&lt;focal_length&gt;/
+│   │       ├── calibration/
+│   │       │   └── rectified/
+│   │       └── inference/
+│   │           ├── F&lt;aperture&gt;/
+│   │           └── rectified/
+│   │          
+│   │
+│   └── EOS6D_B_&lt;Left|Right&gt;/
+│       └── fl_&lt;focal_length&gt;/
+│           ├── calibration/
+│           │   └── rectified/
+│           └── inference/
+│               ├── F&lt;aperture&gt;/
+│               └── rectified/
+│
+└── ...</code></pre>
+                    <div class="dataset-notes">
+                        <h4>Notes</h4>
+                        <ul class="notes-list">
+                            <li><code>&lt;focal_length&gt;</code> ∈ {28mm, 32mm, 36mm, 40mm, 45mm, 50mm, 55mm, 60mm, 65mm, 70mm}</li>
+                            <li><code>&lt;aperture&gt;</code> ∈ {F2.8, F5.0, F9.0, F16.0, F22.0}</li>
+                            <li><code>Scene&lt;id&gt;</code> spans multiple scenes captured under identical optical configurations</li>
+                        </ul>
+                    </div>
                     <h3>Dataset Statistics</h3>
                     <ul class="stats-list">
                         <li><span class="stat-label">Total Images</span><span class="stat-value">18,000</span></li>

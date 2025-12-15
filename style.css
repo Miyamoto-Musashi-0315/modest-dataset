@@ -734,6 +734,40 @@ body {
     font-weight: 500;
 }
 
+.dataset-notes {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.dataset-notes h4 {
+    margin-bottom: 12px;
+    color: var(--foreground);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.notes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.notes-list li {
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted-foreground);
+}
+
+.notes-list code {
+    background: var(--muted);
+    color: var(--foreground);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'SF Mono', 'Monaco', 'Menlo', monospace;
+    font-size: 13px;
+}
+
 .download-buttons {
     display: flex;
     gap: 12px;
